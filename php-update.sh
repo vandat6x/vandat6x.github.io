@@ -5,7 +5,7 @@ read -p "Enter The PHP Update Version (e.g. 7.0.5) : " PHP_VERSION
 PHP_VERSION='7.0.5'
 cd /tmp
 rm -rf *
-wget -O libmcrypt-2.5.8.tar.gz http://downloads.sourceforge.net/mcrypt/libmcrypt-2.5.8.tar.gz?big_mirror=0
+wget -O libmcrypt-2.5.8.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/libmcrypt-2.5.8.tar.gz
 tar xzf libmcrypt-2.5.8.tar.gz
 cd libmcrypt-2.5.8
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -14,7 +14,7 @@ cd libltdl
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local --enable-ltdl-install
 make -j && make install
 cd ../..
-wget -O mhash-0.9.9.9.tar.gz http://downloads.sourceforge.net/mhash/mhash-0.9.9.9.tar.gz?big_mirror=0
+wget -O mhash-0.9.9.9.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/mhash-0.9.9.9.tar.gz
 tar zxvf mhash-0.9.9.9.tar.gz
 cd mhash-0.9.9.9
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -26,7 +26,7 @@ cd re2c-0.13.7.5
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
 make -j4 && make install
 cd ..
-wget -O mcrypt-2.6.8.tar.gz http://downloads.sourceforge.net/mcrypt/mcrypt-2.6.8.tar.gz?big_mirror=0
+wget -O mcrypt-2.6.8.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/mcrypt-2.6.8.tar.gz
 tar xzf mcrypt-2.6.8.tar.gz
 cd mcrypt-2.6.8
 export LDFLAGS="-L${OPENSHIFT_DATA_DIR}usr/local/lib -L/usr/lib"
