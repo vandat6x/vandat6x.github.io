@@ -7,13 +7,9 @@ lưu ý là khi tạo app làm theo hình sau
 <img src="http://i.imgur.com/w0rzir7.png">
 
 Hướng dẫn cài đặt</br>
- PHP5.6</br>
-cd /tmp</br>
-wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/php56.sh</br>
-chmod +x php56.sh</br>
-./php56.sh</br>
 
- PHP 7</br>
+
+ <h3>PHP 7 + nginx</h3></br>
 cd /tmp && wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/php7.sh && chmod +x php7.sh && ./php7.sh</br>
 
 update php</br>
