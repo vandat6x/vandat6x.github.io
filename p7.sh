@@ -57,7 +57,7 @@ make -j4 && make install
 cp ${OPENSHIFT_TMP_DIR}php-${PHP_VERSION}/php.ini-development ${OPENSHIFT_DATA_DIR}etc/php.ini
 cp ${OPENSHIFT_DATA_DIR}etc/php-fpm.conf.default ${OPENSHIFT_DATA_DIR}etc/php-fpm.conf
 cp ${OPENSHIFT_DATA_DIR}etc/php-fpm.d/www.conf.default ${OPENSHIFT_DATA_DIR}etc/php-fpm.d/www.conf
-#安装【编译】 Memcache Redis GeoIP 扩展
+#cài đặt Memcache Redis GeoIP 
 cd /tmp
 wget https://github.com/websupport-sk/pecl-memcache/archive/NON_BLOCKING_IO_php7.zip
 unzip NON_BLOCKING_IO_php7.zip
