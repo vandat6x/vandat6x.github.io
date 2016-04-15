@@ -4,7 +4,7 @@
 
 lưu ý là khi tạo app làm theo hình sau
 
-<img src"http://i.imgur.com/w0rzir7.png">
+<img src="http://i.imgur.com/w0rzir7.png">
 
 Hướng dẫn cài đặt</br>
  PHP5.6</br>
