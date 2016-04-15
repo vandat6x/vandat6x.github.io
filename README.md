@@ -1,12 +1,12 @@
 # nginx + php-fpm cho openshift</br>
 Hướng dẫn cài đặt</br>
-1. PHP5.6</br>
+ PHP5.6</br>
 cd /tmp</br>
 wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/php56.sh</br>
 chmod +x php56.sh</br>
 ./php56.sh</br>
 
-2. PHP 7</br>
+ PHP 7</br>
 cd /tmp</br>
 wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/php7.sh</br>
 chmod +x php7.sh</br>
