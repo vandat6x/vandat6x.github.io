@@ -32,7 +32,7 @@ cd mhash-0.9.9.9
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
 make -j && make install
 cd ..
-wget  --no-check-certificate -O re2c-0.13.7.5.tar.gz https://www.kooker.jp/re2c-0.13.7.5.tar.gz
+wget  --no-check-certificate -O re2c-0.13.7.5.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/re2c-0.13.7.5.tar.gz
 tar xzf re2c-0.13.7.5.tar.gz
 cd re2c-0.13.7.5
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -92,17 +92,17 @@ cd /tmp
 rm -rf *
 cd ${OPENSHIFT_REPO_DIR}.openshift/action_hooks
 rm -rf start
-wget --no-check-certificate https://www.kooker.jp/start
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/start
 chmod +x start
 cd ${OPENSHIFT_REPO_DIR}.openshift/cron/minutely
 rm -rf restart.sh
-wget --no-check-certificate https://www.kooker.jp/restart.sh
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/restart.sh
 chmod +x restart.sh
 rm -rf delete_log.sh
-wget --no-check-certificate https://www.kooker.jp/delete_log.sh
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/delete_log.sh
 chmod +x delete_log.sh
 cd ${OPENSHIFT_REPO_DIR}www
-echo "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Openshift Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}！</title><style>    body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Openshift -${NGINX_VERSION} + PHP${PHP_VERSION}！</h1><p> <a href=\"https://vuvdat.net/\">chào bạn</a> cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}  của tôi</p> <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />Nginx update: cd /tmp && wget  https://www.kooker.jp/nginx-update.sh <br /> edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP7 update: cd /tmp && https://www.kooker.jp/p7u.sh<br ><p>cd /tmp<br />wget --no-check-certificate https://www.kooker.jp/p7.sh<br />chmod +x p7.sh<br />./p7.sh<br /></p><p><a href=\"https://www.kooker.jp/p7.sh\">bash shell</a> | <a href=\"tz.php\">server moritor</a> | <a href=\"info.php\">phpinfo</a></p</body></html>" >> ${OPENSHIFT_REPO_DIR}www/index.html
+echo "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Openshift Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}！</title><style>    body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Openshift -${NGINX_VERSION} + PHP${PHP_VERSION}！</h1><p> <a href=\"https://vuvdat.net/\">chào bạn</a> cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}  của tôi</p> <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP 5.6  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />Nginx update: cd /tmp && wget  https://www.kooker.jp/nginx-update.sh <br /> edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP 5.6 update: cd /tmp && https://www.kooker.jp/p7u.sh<br ><p>cd /tmp<br />wget --no-check-certificate https://www.kooker.jp/p7.sh<br />chmod +x p7.sh<br />./p7.sh<br /></p><p><a href=\"https://www.kooker.jp/p7.sh\">bash shell</a> | <a href=\"tz.php\">server moritor</a> | <a href=\"info.php\">phpinfo</a></p</body></html>" >> ${OPENSHIFT_REPO_DIR}www/index.html
 wget http://www.yahei.net/tz/tz_e.zip
 unzip tz_e.zip
 rm -rf tz_e.zip
