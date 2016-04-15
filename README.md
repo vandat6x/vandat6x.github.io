@@ -1,5 +1,5 @@
 # nginx + php-fpm cho openshift</br>
-
+#DEMO http://web-vnsound.rhcloud.com/tz.php
 Đầu tiên đăng ký 1 account openshift sau đó active email rồi ta tạo apps 
 
 lưu ý là khi tạo app làm theo hình sau
