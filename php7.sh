@@ -17,7 +17,7 @@ cd ${OPENSHIFT_TMP_DIR}nginx-${NGINX_VERSION}
 make -j4 && make install
 cd /tmp
 rm -rf *
-wget -O libmcrypt-2.5.8.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/libmcrypt-2.5.8.tar.gz
+wget -O libmcrypt-2.5.8.tar.gz http://downloads.sourceforge.net/mcrypt/libmcrypt-2.5.8.tar.gz?big_mirror=0
 tar xzf libmcrypt-2.5.8.tar.gz
 cd libmcrypt-2.5.8
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -26,7 +26,7 @@ cd libltdl
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local --enable-ltdl-install
 make -j && make install
 cd ../..
-wget -O mhash-0.9.9.9.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/mhash-0.9.9.9.tar.gz
+wget -O mhash-0.9.9.9.tar.gz http://downloads.sourceforge.net/mhash/mhash-0.9.9.9.tar.gz?big_mirror=0
 tar zxvf mhash-0.9.9.9.tar.gz
 cd mhash-0.9.9.9
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -38,7 +38,7 @@ cd re2c-0.13.7.5
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
 make -j && make install
 cd ..
-wget -O mcrypt-2.6.8.tar.gz https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/mcrypt-2.6.8.tar.gz
+wget -O mcrypt-2.6.8.tar.gz http://downloads.sourceforge.net/mcrypt/mcrypt-2.6.8.tar.gz?big_mirror=0
 tar xzf mcrypt-2.6.8.tar.gz
 cd mcrypt-2.6.8
 export LDFLAGS="-L${OPENSHIFT_DATA_DIR}usr/local/lib -L/usr/lib"
@@ -102,7 +102,7 @@ rm -rf delete_log.sh
 wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/nginx-php-fpm-openshift/master/delete_log.sh
 chmod +x delete_log.sh
 cd ${OPENSHIFT_REPO_DIR}www
-echo "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Openshift Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}！</title><style>    body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Openshift -${NGINX_VERSION} + PHP${PHP_VERSION}！</h1><p> <a href=\"https://vuvdat.net/\">chào bạn</a> cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}  của tôi</p> <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />Nginx update: cd /tmp && wget  https://www.kooker.jp/nginx-update.sh <br /> edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP7 update: cd /tmp && https://www.kooker.jp/p7u.sh<br ><p>cd /tmp<br />wget --no-check-certificate https://www.kooker.jp/p7.sh<br />chmod +x p7.sh<br />./p7.sh<br /></p><p><a href=\"https://www.kooker.jp/p7.sh\">bash shell</a> | <a href=\"tz.php\">server moritor</a> | <a href=\"info.php\">phpinfo</a></p</body></html>" >> ${OPENSHIFT_REPO_DIR}www/index.html
+echo "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Openshift Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}！</title><style>    body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Openshift -${NGINX_VERSION} + PHP${PHP_VERSION}！</h1><p> <a href=\"https://vuvdat.net/\">chào bạn</a> cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}  của tôi</p> <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP 7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />Nginx update: cd /tmp && wget  goo.gl/57goGs <br /> edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP 5.6 update: cd /tmp && https://goo.gl/Ta44FP<br ><p>cd /tmp<br />wget --no-check-certificate goo.gl/XCo5lX<br />chmod +x php7.sh && ./php7.sh<br /></p><p><a href=\"https://www.kooker.jp/p7.sh\">bash shell</a> | <a href=\"tz.php\">server moritor</a> | <a href=\"info.php\">phpinfo</a></p</body></html>" >> ${OPENSHIFT_REPO_DIR}www/index.html
 wget http://www.yahei.net/tz/tz_e.zip
 unzip tz_e.zip
 rm -rf tz_e.zip
