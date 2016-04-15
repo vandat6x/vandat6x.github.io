@@ -59,14 +59,14 @@ cp ${OPENSHIFT_DATA_DIR}etc/php-fpm.conf.default ${OPENSHIFT_DATA_DIR}etc/php-fp
 cp ${OPENSHIFT_DATA_DIR}etc/php-fpm.d/www.conf.default ${OPENSHIFT_DATA_DIR}etc/php-fpm.d/www.conf
 #cài đặt Memcache Redis GeoIP 
 cd /tmp
-wget https://github.com/websupport-sk/pecl-memcache/archive/NON_BLOCKING_IO_php7.zip
+wget https://github.com/websupport-sk/pecl-memcache/archive/NON_BLOCKING_IO.zip
 unzip NON_BLOCKING_IO_php7.zip
 cd pecl-memcache-NON_BLOCKING_IO_php7
 phpize
 ./configure --with-php-config=${OPENSHIFT_DATA_DIR}/bin/php-config --enable-memcache
 make -j && make install
 cd /tmp
-wget -c https://github.com/phpredis/phpredis/archive/php7.zip
+wget -c https://github.com/phpredis/phpredis/archive/devlop.zip
 unzip php7.zip
 cd phpredis-php7
 phpize
