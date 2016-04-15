@@ -1,4 +1,11 @@
 # nginx + php-fpm cho openshift</br>
+
+Đầu tiên đăng ký 1 account openshift sau đó active email rồi ta tạo apps 
+
+lưu ý là khi tạo app làm theo hình sau
+
+<img src"http://i.imgur.com/w0rzir7.png">
+
 Hướng dẫn cài đặt</br>
  PHP5.6</br>
 cd /tmp</br>
