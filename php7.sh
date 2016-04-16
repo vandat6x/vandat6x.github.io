@@ -127,7 +127,7 @@ unzip tz_e.zip
 rm -rf tz_e.zip
 mv tz_e.php tz.php
 sed -i "s/\$_SERVER\['REMOTE_ADDR'\];/\$_SERVER\['HTTP_X_FORWARDED_FOR'\];/g;s/\$_SERVER\[PHP_SELF\]/\$_SERVER\['PHP_SELF'\]/g;s/\$_SERVER\['PHP_SELF'\]/htmlentities(\$_SERVER\[‘PHP_SELF’\])/g;s/eregi(\"phpinfo\",\$disFuns)/preg_match(\"phpinfo\/i\",\$disFuns)/g;s/mcrypt_cbc/mcrypt_encrypt/g;s/mysql_/mysqli_/g" ${OPENSHIFT_REPO_DIR}www/tz.php
-read -p " Neu ban muon cai wordpress nhan [Enter] de tiep tuc. Ngươc lai nhan Ctrl + C de huy"
+read -p " Neu ban muon cai wordpress nhan [Enter] de tiep tuc. Neu muon cai ma nguon khac nhan Ctrl + C de huy bo"
 cd ${OPENSHIFT_REPO_DIR}www
 wget https://wordpress.org/latest.zip && unzip latest.zip && cp -r wordpress/* ${OPENSHIFT_REPO_DIR}www   && rm -rf wordpress && rm -rf latest.zip
 
