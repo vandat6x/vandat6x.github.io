@@ -1,4 +1,22 @@
+# Begin update
 
-read -p "Nhan [Enter] de tiep tuc ..."
+echo "===================================================="
+echo "=  wordpress update Cho Openshift ！               ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="     
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  =" 
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                  Cài đặt...                      ="
+echo "=                                                  ="
+echo "===================================================="
+read -p " nhan [Enter] de tiep tuc..."
+
 cd ${OPENSHIFT_REPO_DIR}www
  rm -rf wp-admin && rm -rf wp-includes && wget https://wordpress.org/latest.zip && unzip latest.zip && rm -rf wp-content && cp -r wordpress/* ${OPENSHIFT_REPO_DIR}www   && rm -rf wordpress && rm -rf latest.zip
+echo " wordpress da duoc update len phien ban moi nhat"

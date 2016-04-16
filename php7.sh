@@ -7,7 +7,7 @@ PHP_VERSION='7.0.5'
 # Begin installation
 
 echo "===================================================="
-echo "=    NGINX 1.9 + PHP 7.0 Cho Openshift ！          ="
+echo "=  NGINX 1.9 + PHP 7.0 + wordpress Cho Openshift ！ ="
 echo "=                                                  ="
 echo "=                                                  ="
 echo "=                                                  ="
@@ -21,8 +21,7 @@ echo "=                                                  ="
 echo "=                  Cài đặt...                      ="
 echo "=                                                  ="
 echo "===================================================="
-sleep 3
-
+read -p " nhan [Enter] de tiep tuc..."
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 tar xzf nginx-${NGINX_VERSION}.tar.gz
@@ -128,6 +127,10 @@ unzip tz_e.zip
 rm -rf tz_e.zip
 mv tz_e.php tz.php
 sed -i "s/\$_SERVER\['REMOTE_ADDR'\];/\$_SERVER\['HTTP_X_FORWARDED_FOR'\];/g;s/\$_SERVER\[PHP_SELF\]/\$_SERVER\['PHP_SELF'\]/g;s/\$_SERVER\['PHP_SELF'\]/htmlentities(\$_SERVER\[‘PHP_SELF’\])/g;s/eregi(\"phpinfo\",\$disFuns)/preg_match(\"phpinfo\/i\",\$disFuns)/g;s/mcrypt_cbc/mcrypt_encrypt/g;s/mysql_/mysqli_/g" ${OPENSHIFT_REPO_DIR}www/tz.php
+read -p " Neu ban muon cai wordpress nhan [Enter] de tiep tuc. Ngươc lai nhan Ctrl + C de huy"
+cd ${OPENSHIFT_REPO_DIR}www
+wget https://wordpress.org/latest.zip && unzip latest.zip && cp -r wordpress/* ${OPENSHIFT_REPO_DIR}www   && rm -rf wordpress && rm -rf latest.zip
+
 gear stop
 gear start
 

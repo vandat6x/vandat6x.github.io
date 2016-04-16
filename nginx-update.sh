@@ -1,8 +1,25 @@
 #!/bin/bash
 unset TMOUT
+# Begin update
 
+echo "===================================================="
+echo "=  NGINX 1.9 update                                ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="     
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  =" 
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                  Cài đặt...                      ="
+echo "=                                                  ="
+echo "===================================================="
+read -p " nhan [Enter] de tiep tuc..."
 cp ${OPENSHIFT_DATA_DIR}conf/nginx.conf ${OPENSHIFT_DATA_DIR}conf/nginx.conf.bak
-read -p "Enter The Nginx Update Version (e.g. 1.9.13) : " NGINX_VERSION
+read -p "Nhap phien ban nginx (v.d 1.9.13) : " NGINX_VERSION
 NGINX_VERSION='1.9.13'
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz

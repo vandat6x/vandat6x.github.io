@@ -1,7 +1,24 @@
 #!/bin/bash
 unset TMOUT
+# Begin update
 
-read -p "Enter The PHP Update Version (e.g. 7.0.5) : " PHP_VERSION
+echo "===================================================="
+echo "=   PHP 7 UPDATE！                                 ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="     
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  =" 
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                  Cài đặt...                      ="
+echo "=                                                  ="
+echo "===================================================="
+sleep 3
+read -p "Nhap phien ban php (v.d 7.0.5) : " PHP_VERSION
 PHP_VERSION='7.0.5'
 cd /tmp
 rm -rf *
