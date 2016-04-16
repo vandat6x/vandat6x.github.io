@@ -41,7 +41,7 @@ div.bd {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-ser
  
 <body>
 <div class="bd">
-<h1>NGINX 1.9 + PHP 7.0 CHO Openshift ！</h1>
+<h1>NGINX 1.9 + PHP 7.0 Cho Openshift ！</h1>
 <p > Chào bạn. Cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx 1.9.X + PHP 7.0  của tôi</p> 
 <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP 7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />
 Nginx update: cd /tmp && wget http://vandat6x.github.io/nginx-update.sh <br /> 

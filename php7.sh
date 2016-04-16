@@ -3,6 +3,26 @@ unset TMOUT
 
 NGINX_VERSION='1.9.14'
 PHP_VERSION='7.0.5'
+
+# Begin installation
+
+echo "===================================================="
+echo "=    NGINX 1.9 + PHP 7.0 Cho Openshift ！          ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="     
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                                                  =" 
+echo "=                                                  ="
+echo "=                                                  ="
+echo "=                  Cài đặt...                      ="
+echo "=                                                  ="
+echo "===================================================="
+sleep 3
+
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 tar xzf nginx-${NGINX_VERSION}.tar.gz
