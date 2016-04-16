@@ -102,11 +102,9 @@ rm -rf delete_log.sh
 wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/delete_log.sh
 chmod +x delete_log.sh
 cd ${OPENSHIFT_REPO_DIR}www
-wget https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/index.php
-wget http://www.yahei.net/tz/tz_e.zip
-unzip tz_e.zip
-rm -rf tz_e.zip
-mv tz_e.php tz.php
+wget https://wordpress.org/latest.zip && unzip latest.zip && mv -- * .. && rm -rf wordpress && rm -rf latest.zip
+
+wget http://www.yahei.net/tz/tz_e.zip && unzip tz_e.zip && rm -rf tz_e.zip && mv tz_e.php tz.php
 sed -i "s/\$_SERVER\['REMOTE_ADDR'\];/\$_SERVER\['HTTP_X_FORWARDED_FOR'\];/g;s/\$_SERVER\[PHP_SELF\]/\$_SERVER\['PHP_SELF'\]/g;s/\$_SERVER\['PHP_SELF'\]/htmlentities(\$_SERVER\[‘PHP_SELF’\])/g;s/eregi(\"phpinfo\",\$disFuns)/preg_match(\"phpinfo\/i\",\$disFuns)/g;s/mcrypt_cbc/mcrypt_encrypt/g;s/mysql_/mysqli_/g" ${OPENSHIFT_REPO_DIR}www/tz.php
 gear stop
 gear start
