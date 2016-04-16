@@ -7,7 +7,7 @@ cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 tar xzf nginx-${NGINX_VERSION}.tar.gz
 #wget http://exim.mirror.fr/pcre/pcre-8.38.tar.gz
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
+wget https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/pcre-8.38.tar.gz
 tar xzf pcre-8.38.tar.gz
 git clone https://github.com/FRiCKLE/ngx_cache_purge.git
 git clone https://github.com/yaoweibin/ngx_http_substitutions_filter_module.git
@@ -17,7 +17,7 @@ cd ${OPENSHIFT_TMP_DIR}nginx-${NGINX_VERSION}
 make -j4 && make install
 cd /tmp
 rm -rf *
-wget -O libmcrypt-2.5.8.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/libmcrypt-2.5.8.tar.gz
+wget -O libmcrypt-2.5.8.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/libmcrypt-2.5.8.tar.gz
 tar xzf libmcrypt-2.5.8.tar.gz
 cd libmcrypt-2.5.8
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
@@ -26,19 +26,19 @@ cd libltdl
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local --enable-ltdl-install
 make -j && make install
 cd ../..
-wget -O mhash-0.9.9.9.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/mhash-0.9.9.9.tar.gz
+wget -O mhash-0.9.9.9.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/mhash-0.9.9.9.tar.gz
 tar zxvf mhash-0.9.9.9.tar.gz
 cd mhash-0.9.9.9
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
 make -j && make install
 cd ..
-wget  --no-check-certificate -O re2c-0.13.7.5.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/re2c-0.13.7.5.tar.gz
+wget  --no-check-certificate -O re2c-0.13.7.5.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/re2c-0.13.7.5.tar.gz
 tar xzf re2c-0.13.7.5.tar.gz
 cd re2c-0.13.7.5
 ./configure --prefix=${OPENSHIFT_DATA_DIR}usr/local
 make -j && make install
 cd ..
-wget -O mcrypt-2.6.8.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/mcrypt-2.6.8.tar.gz
+wget -O mcrypt-2.6.8.tar.gz https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/mcrypt-2.6.8.tar.gz
 tar xzf mcrypt-2.6.8.tar.gz
 cd mcrypt-2.6.8
 export LDFLAGS="-L${OPENSHIFT_DATA_DIR}usr/local/lib -L/usr/lib"
@@ -92,14 +92,14 @@ cd /tmp
 rm -rf *
 cd ${OPENSHIFT_REPO_DIR}.openshift/action_hooks
 rm -rf start
-wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/start
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/start
 chmod +x start
 cd ${OPENSHIFT_REPO_DIR}.openshift/cron/minutely
 rm -rf restart.sh
-wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/restart.sh
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/restart.sh
 chmod +x restart.sh
 rm -rf delete_log.sh
-wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master//master/delete_log.sh
+wget --no-check-certificate https://raw.githubusercontent.com/vandat6x/vandat6x.github.io/master/delete_log.sh
 chmod +x delete_log.sh
 cd ${OPENSHIFT_REPO_DIR}www
 echo "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Openshift Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}！</title><style>    body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Openshift -${NGINX_VERSION} + PHP${PHP_VERSION}！</h1><p> <a href=\"https://vuvdat.net/\">chào bạn</a> cảm ơn các ban đã sự dụng bash shell cài đặt tự động  Nginx-${NGINX_VERSION} + PHP${PHP_VERSION}  của tôi</p> <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />Nginx update: cd /tmp && wget  https://www.kooker.jp/nginx-update.sh <br /> edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP7 update: cd /tmp && https://www.kooker.jp/p7u.sh<br ><p>cd /tmp<br />wget --no-check-certificate https://www.kooker.jp/p7.sh<br />chmod +x p7.sh<br />./p7.sh<br /></p><p><a href=\"https://www.kooker.jp/p7.sh\">bash shell</a> | <a href=\"tz.php\">server moritor</a> | <a href=\"info.php\">phpinfo</a></p</body></html>" >> ${OPENSHIFT_REPO_DIR}www/index.html
