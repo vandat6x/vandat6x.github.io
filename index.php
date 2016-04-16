@@ -46,7 +46,7 @@ div.bd {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-ser
 <br />Tập tin cấu hình của nginx  app-root/data/conf，tập tin cấu hình  PHP 7  app-root/data/etc, upload code lên  app-root/runtime/repo/www，<br />
 Nginx update: cd /tmp && wget http://vandat6x.github.io/nginx-update.sh <br /> 
 edit code qua vim hoặc các trình edit khác  sửa  NGINX_VERSION='1.9.13'  thành version mới nhất trên  trang chủ nginx. PHP 7.0 update: cd /tmp && http://vandat6x.github.io/php-update.sh <br >
-<p>cd /tmp<br />wget --no-check-certificate http://vandat6x.github.io/php7.sh <br />chmod +x php7.sh && ./php7.sh<br /></p>
+<p>cd /tmp<br />wget --no-check-certificate http://vandat6x.github.io/php7.sh <br />chmod +x php7.sh && ./php7.sh<br/> Wordpress update: cd /tmp && http://vandat6x.github.io/wp-update.sh </p>
 <a href="http://vuvdat.net/">My website</a> | contact me:<a href="mailto:help@vuvdat.net"></a>help@vuvdat.net  | <p class="flip1">server monitor</p> | <p class="flip" >phpinfo</p>
 </div>
  
