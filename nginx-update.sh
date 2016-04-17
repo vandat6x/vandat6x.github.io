@@ -20,7 +20,6 @@ echo "===================================================="
 read -p " nhan [Enter] de tiep tuc..."
 cp ${OPENSHIFT_DATA_DIR}conf/nginx.conf ${OPENSHIFT_DATA_DIR}conf/nginx.conf.bak
 read -p "Nhap phien ban nginx (v.d 1.9.13) : " NGINX_VERSION
-#NGINX_VERSION='1.9.13'
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 tar xzf nginx-${NGINX_VERSION}.tar.gz

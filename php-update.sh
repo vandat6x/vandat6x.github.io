@@ -19,7 +19,6 @@ echo "=                                                  ="
 echo "===================================================="
 sleep 3
 read -p "Nhap phien ban php (v.d 7.0.5) : " PHP_VERSION
-PHP_VERSION='7.0.5'
 cd /tmp
 rm -rf *
 wget -O libmcrypt-2.5.8.tar.gz http://vandat6x.github.io/libmcrypt-2.5.8.tar.gz

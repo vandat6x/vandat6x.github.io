@@ -23,8 +23,6 @@ read -p " nhan [Enter] de tiep tuc..."
 unset TMOUT
 read -p "Nhap phien ban nginx (v.d 1.9.13) : " NGINX_VERSION
 read -p "Nhap phien ban php (v.d 7.0.5) : " PHP_VERSION
-NGINX_VERSION='1.9.14'
-PHP_VERSION='7.0.5'
 cd $OPENSHIFT_TMP_DIR
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 tar xzf nginx-${NGINX_VERSION}.tar.gz
